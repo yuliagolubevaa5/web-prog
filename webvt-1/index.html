@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="blockStyle">
+    <article class="content">
+        <form method="post" action="php/index.php" id="myForm">
+            <div class="form-group">
+                <div class="form-inputs">
+                    <label for="name">Имя:</label>
+                    <input type="text" name="name" autocomplete="off" required>
+                </div>
+                <div class="form-inputs">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" name="surname" autocomplete="off" required>
+                </div>
+                <div class="form-inputs">
+                    <label for="login">Логин:</label>
+                    <input type="text" name="login" autocomplete="off" required>
+                </div>
+                <div class="radio" class="form-inputs" id="sex">
+                    <label>Пол</label>
+                    <span style="float: right">
+                        <input type="radio" name="sex" value="мужской" style="width: 35px; float: none">МУЖСКОЙ
+                        <div class="radio-control male"></div>
+                    </span>
+                    <span style="float: right">
+                        <input type="radio" name="sex" value="женский" style="width: 35px; float: none">ЖЕНСКИЙ
+                        <div class="radio-control female"></div>
+                    </span>
+                </div>
+                <div class="form-inputs">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" autocomplete="off" required>
+                </div>
+                <div class="form-inputs">
+                    <label for="age">Возраст:</label>
+                    <select name="age" style="float: right" required id="age">
+                        <option value="default">Подтвердите свой возраст</option>
+                        <option value="<18">
+                            < 18</option> <option value=">=18">>= 18
+                        </option>
+                    </select>
+                </div>
+                <div class="form-inputs">
+                    <label for="password">Пароль: </label>
+                    <input type="password" min="8" axlength="25" size="25" name="password" id="password" autocomplete="off" required>
+                </div>
+                <div class="form-inputs ">
+                    <label for="password-confirmation">Повтор пароля:</label>
+                    <input type="password" maxlength="25" size="25" name="password--confirmation" id="password-confirmation" autocomplete="off" required>
+                </div>
+                <div class="form-inputs">
+                    <label for="agree">Подтвердите согласие на использование cookie:</label>
+                    <input type="checkbox" id="agree" name="agree" required>
+                </div>
+            </div>
+            <button type="submit" class='validateBtn'>Отправить</button>
+        </form>
+        <button id="color_btn" onclick="addColor()">Тёмная тема</button>
+    </article>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

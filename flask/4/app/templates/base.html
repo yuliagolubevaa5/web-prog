@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    {% if title %}
+    <title>{{ title }} - Microblog</title>
+    {% else %}
+    <title>Welcome to Microblog</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                Microblog
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/index">Home</a>
+                    </li>
+                    <li>
+                        <a href="/index">About</a>
+                    </li>
+                    <li>
+                        <a href="/index">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% extends 'bootstrap/base.html' %}
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+
+</html>
